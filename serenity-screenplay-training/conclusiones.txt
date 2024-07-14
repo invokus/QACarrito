@@ -1,0 +1,32 @@
+# Conclusiones del Ejercicio de Prueba E2E
+
+## Hallazgos
+1. **Funcionalidad del Carrito de Compras:**
+   - El sistema permite agregar productos al carrito correctamente.
+   - Los productos se mantienen en el carrito cuando se navega entre páginas.
+
+2. **Formulario de Compra:**
+   - El formulario de compra se muestra correctamente con todos los campos requeridos.
+   - El formulario no valida que el campo de tarjeta de credito sea solo numérico
+
+3. **Proceso de Compra:**
+   - La confirmación de compra se muestra correctamente después de completar el formulario.
+   - El mensaje de confirmación está visible y muestra el texto esperado.
+
+## Conclusiones
+1. **Estabilidad del Sistema:**
+   - El sistema demostró ser estable durante el proceso de prueba, sin fallos críticos.
+
+2. **Experiencia del Usuario:**
+   - La navegación entre productos y la adición al carrito es intuitiva y rápida.
+   - El proceso de compra es directo y sencillo, proporcionando una buena experiencia de usuario.
+
+3. **Áreas de Mejora:**
+   - Sería beneficioso agregar más validaciones en el formulario de compra para asegurar la entrada de datos correcta.
+   - Considerar la implementación de mensajes de error más detallados para guiar al usuario en caso de fallos.
+
+4. **Siguientes Pasos:**
+   - Realizar pruebas adicionales enfocadas en la validación de datos del formulario.
+   - Ampliar la suite de pruebas para incluir diferentes escenarios de usuario y casos de borde.
+
+Este ejercicio ha demostrado la capacidad del sistema para manejar transacciones de compra básicas y ha identificado áreas clave para futuras mejoras.
