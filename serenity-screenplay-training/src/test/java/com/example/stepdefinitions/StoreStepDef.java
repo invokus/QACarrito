@@ -49,8 +49,12 @@ public class StoreStepDef {
 
     @And("agrego los datos para la compra")
     public void agregoLosDatosParaLaCompra() {
+    }
+
+    @And("^ingreso (.*) (.*) (.*) (.*) (.*) (.*)$")
+    public void form(
+            String name, String country, String city, String creditCard, String month, String year) {
         theActorInTheSpotlight().attemptsTo(
-                Purchase.purchase()
-        );
+                Purchase.withData(name, country, city, creditCard, month, year));
     }
 }

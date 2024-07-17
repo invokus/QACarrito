@@ -13,19 +13,12 @@ public class StoreCart implements Task {
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
                 Click.on(StorePage.firstProduct),
-                Time.time(5000),
                 Click.on(StorePage.btnAdd),
-                Time.time(5000),
                 Click.on(StorePage.home),
-                Time.time(5000),
                 Click.on(StorePage.secondtProduct),
-                Time.time(5000),
                 Click.on(StorePage.btnAdd),
-                Time.time(5000),
                 Click.on(StorePage.cart),
-                Time.time(5000),
-                Click.on(StorePage.placeOrder),
-                Time.time(5000)
+                Click.on(StorePage.placeOrder)
         );
     }
 

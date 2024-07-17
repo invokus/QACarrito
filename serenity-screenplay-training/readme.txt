@@ -1,17 +1,51 @@
-# Instrucciones para la Ejecución de la Prueba E2E
-
+# Product Store Automation
+Este proyecto automatiza la compra de productos en una tienda en línea utilizando Serenity BDD, Cucumber y Screenplay.
 ## Requisitos Previos
-1. Instalar Java Development Kit (JDK) versión 1.8 - 11 - 17
-2. Instalar Apache Maven versión 3.9.1 o superior.
-3. Descargar y descomprimir el ChromeDriver compatible con tu versión de Google Chrome.
-4. Tener instalada la última versión de Google Chrome.
+- JDK 8 o superior
+- Maven 3.6.0 o superior
+- Git
+## Instalación
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/invokus/QACarrito.git
+    ```
+2. Navega al directorio del proyecto:
+    ```bash
+    cd serenity-screenplay-training
+    ```
+3. Compila el proyecto y descarga las dependencias:
 
-## Configuración del Proyecto
-1. Clonar o descargar el repositorio del proyecto.
-2. Colocar el archivo 'chromedriver' en una ubicación adecuada y obtener la ruta absoluta.
+    ```bash
+    mvn clean install
+    ```
 
-## Instrucciones Paso a Paso
-1. Abrir una terminal o línea de comandos.
-2. Navegar al directorio del proyecto.
-3. Ejecutar el comando 'mvn clean install' para instalar las dependencias del proyecto.
-4. Asegurarse de que la ruta de 'chromedriver' esté correctamente configurada:
+## Estructura del Proyecto
+
+- **src/test/resources/features/web/Store.feature**: Ubicación de los archivos Gherkin (.feature).
+- **src/test/java/com/example/stepdefinitions/StoreStepDef.java**: Definiciones de los pasos.
+- **src/test/java/com/example/tasks/web/NavigateTo.java**: Tareas que realizan las acciones para entrar a la página.
+- **src/test/java/com/example/tasks/web/StoreCart.java**: Tareas que realizan las acciones para la seleccion de productos.
+- **src/test/java/com/example/tasks/web/Purchase.java**: Tareas que realizan las acciones para el ingreso de datos para el pago.
+- **src/test/java/com/example/userinterfaces/screens/StoreConfirmPage.java**: Definiciones de las páginas y elementos para confirmar el pago.
+- **src/test/java/com/example/userinterfaces/screens/StorePage.java**: Definiciones de las páginas y elementos para seleccionar los productos.
+- **datos.json**: Datos de prueba en formato JSON.
+
+## Datos de Prueba
+
+Los datos de prueba se encuentran en el directorio `datos.json`. Por ejemplo:
+
+### Datos en JSON
+
+Ubicación: `productos.json`
+
+```json
+[
+  {
+    "name": "Juan Peres",
+    "country": "Ecuador",
+    "city": "Quito",
+    "credit_card": "1234-5678-9123-4567",
+    "month": "12",
+    "year": "2024"
+  }
+]
